@@ -1,0 +1,15 @@
+<!-- MedicalAppointmentSystem/templates/profiles/create_profile.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tworzenie Profilu</title>
+</head>
+<body>
+    <h2>Tworzenie Profilu</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Utwórz Profil</button>
+    </form>
+</body>
+</html>

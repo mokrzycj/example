@@ -1,0 +1,15 @@
+<!-- MedicalAppointmentSystem/templates/appointments/schedule_appointment.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Umawianie Wizyty</title>
+</head>
+<body>
+    <h2>Umawianie Wizyty</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Umów Wizytę</button>
+    </form>
+</body>
+</html>

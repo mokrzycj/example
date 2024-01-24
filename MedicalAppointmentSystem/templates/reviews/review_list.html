@@ -1,0 +1,21 @@
+<!-- MedicalAppointmentSystem/templates/reviews/review_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista Opinii</title>
+</head>
+<body>
+    <h2>Lista Opinii</h2>
+    <ul>
+        {% for review in reviews %}
+        <li>
+            Opinia od: {{ review.reviewer }},
+            Ocena: {{ review.rating }},
+            Komentarz: {{ review.comment }}
+        </li>
+        {% empty %}
+        <li>Brak opinii.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

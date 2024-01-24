@@ -1,0 +1,15 @@
+<!-- MedicalAppointmentSystem/templates/clinics/new_clinic_request.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nowy Wniosek o Dołączenie do Przychodni</title>
+</head>
+<body>
+    <h2>Nowy Wniosek o Dołączenie do Przychodni</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Wyślij Wniosek</button>
+    </form>
+</body>
+</html>

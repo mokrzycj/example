@@ -1,0 +1,15 @@
+<!-- MedicalAppointmentSystem/templates/reviews/add_review.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dodawanie Opinii</title>
+</head>
+<body>
+    <h2>Dodawanie Opinii</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Dodaj Opinię</button>
+    </form>
+</body>
+</html>

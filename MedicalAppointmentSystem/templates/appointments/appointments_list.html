@@ -1,0 +1,21 @@
+<!-- MedicalAppointmentSystem/templates/appointments/appointments_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista Wizyt</title>
+</head>
+<body>
+    <h2>Lista Wizyt</h2>
+    <ul>
+        {% for appointment in appointments %}
+        <li>
+            Wizyta z: {{ appointment.specialist }},
+            Data: {{ appointment.scheduled_time|date:"d M Y H:i" }},
+            Status: {{ appointment.status }}
+        </li>
+        {% empty %}
+        <li>Brak zaplanowanych wizyt.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- MedicalAppointmentSystem/templates/clinics/clinic_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista Przychodni</title>
+</head>
+<body>
+    <h2>Lista Przychodni</h2>
+    <ul>
+        {% for clinic in clinics %}
+        <li>
+            Nazwa: {{ clinic.name }},
+            Adres: {{ clinic.address }},
+            Telefon: {{ clinic.phone_number }},
+            E-mail: {{ clinic.email }}
+        </li>
+        {% empty %}
+        <li>Brak przychodni.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
